@@ -4,7 +4,7 @@ const models = require('./../models');
 const env = process.env.NODE_ENV || 'development';
 const config = require('../config/mongo')[env];
 
-const envUrl = process.env[config.use_env_constiable];
+const envUrl = process.env[config.use_env_variable];
 const localUrl = `mongodb://${ config.host }/${ config.database }`;
 const mongodbUrl =  envUrl ? envUrl : localUrl;
 
