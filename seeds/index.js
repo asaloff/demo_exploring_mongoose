@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const mongooseeder = require('mongooseeder');
 const models = require('./../models');
 const env = process.env.NODE_ENV || 'development';
-const config = require('./config/mongo')[env];
+const config = require('../config/mongo')[env];
 
 const envUrl = process.env[config.use_env_constiable];
 const localUrl = `mongodb://${ config.host }/${ config.database }`;
